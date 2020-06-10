@@ -1,0 +1,119 @@
+@font-face {
+    font-family: p5hatty;
+    src: url(../fonts/p5hatty.ttf);
+  }
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+    font-family: 'p5hatty';
+    text-align: center;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.container {
+    width: 95%;
+    margin: 0 auto;
+}
+
+/* typography */
+
+.title {
+    font-size: 2.5rem;
+}
+
+@media (min-width:60rem) {
+    .title {
+        font-size: 7rem;
+    }
+}
+/* header */
+
+.logo {
+    max-width: 20%;
+    max-height: 100%;
+}
+
+header {
+    position: absolute;
+    width: 100%;
+    margin-top: 1em;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin: 1em;
+}
+
+nav a {
+    font-weight: 900;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: white;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+    padding: 0.5em;
+}
+
+nav a:hover,
+nav a:focus {
+	color: #ddd;
+}
+
+@media (min-width:60rem) {
+	.logo {
+		max-width: 12%;
+        max-height: 100%;
+        float: left;
+	}
+
+	nav {
+		padding-top: 2.5em;
+        float: right;
+    }
+    
+    nav a {
+        font-size: 2rem;
+    }
+}
+
+/* First Section - Welcome */
+
+.welcome {
+    background-image: url(../img/city-night.jpg);
+    background-size: cover;
+	background-position: center;
+    padding: 1.5em;
+    padding-top: 12em;
+    color: white;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+
+@media (min-width:60rem) {
+    .welcome {
+        padding-top: 10em;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
