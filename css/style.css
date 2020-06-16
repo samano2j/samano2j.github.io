@@ -30,14 +30,6 @@ h1 {
 	margin-top: 0;
 }
 
-ul.list2col {
-    float: left; width: 100%; margin: 0 0 1em 0;
-}
-
-ul.list2col li {
-    float: left; width: 49%;
-}
-
 .title {
     font-size: 2.5rem;
 }
@@ -120,6 +112,7 @@ nav a:focus {
     .welcome {
         padding: 4em;
         padding-top: 20em;
+        height: 100vh;
     }
 }
 
@@ -138,48 +131,93 @@ nav a:focus {
     height: 400px;
 }
 
-.life-textbox1 {
+.life-textbox1, .life-textbox2, .life-textbox3 {
     background-color: black;
     outline: 2px solid red;
-    outline-offset: -2em;
+    outline-offset: -1.5em;
     padding: 2em;
     color: white;
-    width: 50vw;
-    margin-left: 50%;
-    margin-top: -56%;
+    width: 50%;
+    height: 25%;
+    margin-left: 48%;
+    position: relative;
     font-size: 1rem;
+}
+
+.life-textbox1 {
+    top: -100%;
 }
 
 .life-textbox2 {
-    background-color: blue;
-    outline: 2px solid red;
-    outline-offset: -2.5em;
-    padding: 1em;
-    color: white;
-    width: 50vw;
-    margin-left: 50%;
-    margin-top: 90%;
-    font-size: 1rem;
+    top: -95%;
 }
 
 .life-textbox3 {
-    background-color: yellow;
-    outline: 2px solid red;
-    outline-offset: -2.5em;
-    padding: 1em;
-    color: white;
-    width: 50vw;
-    margin-left: 50%;
-    margin-top: 100%;
-    font-size: 1rem;
+    top: -90%;
+    padding: 4.5em;
 }
 
-.life-textbox1 h1 {
+.life-textbox1 h1, .life-textbox2 h1, .life-textbox3 h1 {
+    background-color: black;
     color: red;
     font-size: 1.5rem;
+    position: absolute;
+    transform: translateX(-50%);
+    top: .25em;
+    left: 25%;
+    padding: 0.2em;
 }
 
+ul.list2col {
+    float: left; 
+    width: 100%; 
+    margin-top: -14%;
+    margin-left: -25%;
+}
 
+ul.list2col li {
+    float: left; 
+    width: 50%;
+}
+
+@media (min-width:60rem) {
+    
+    .profile {
+        max-width: 100%;
+        height: auto;
+        width: 95vh;
+    }
+
+    .life {
+        height: 100vh;
+    }
+
+    .life-textbox1, .life-textbox2, .life-textbox3 {
+        font-size: 2rem;
+    }
+    
+    .life-textbox1 {
+        top: -90%;
+    }
+    
+    .life-textbox2 {
+        top: -85%;
+    }
+    
+    .life-textbox3 {
+        top: -80%;
+        padding: 4.2em;
+    }
+
+    .life-textbox1 h1, .life-textbox2 h1, .life-textbox3 h1 {
+        font-size: 3rem;
+        left: 23%;
+    }
+
+    ul.list2col {
+        margin-left: -15%;
+    }
+}
 
 
 
