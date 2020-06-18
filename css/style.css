@@ -117,7 +117,7 @@ nav a:focus {
 }
 
 /* Second Section - Life */
-.profile {
+.profile1 {
     max-width: 100%;
     height: 400px;
     width: 350px;
@@ -182,10 +182,11 @@ ul.list2col li {
 
 @media (min-width:60rem) {
     
-    .profile {
+    .profile1 {
         max-width: 100%;
         height: auto;
-        width: 95vh;
+        width: 80vh;
+        margin-top: 7%;
     }
 
     .life {
@@ -219,7 +220,104 @@ ul.list2col li {
     }
 }
 
+/* Third Section - Interests */
 
+.profile2 {
+    max-width: 100%;
+    height: 350px;
+    float: right;
+    margin-top: -48%;
+}
+
+.interests {
+    background-image: url(../img/bg1.jpg);
+    background-size: cover;
+    background-position: center;
+    max-width: 100%;
+    height: 400px;
+}
+
+.interests-textbox {
+    background-color: black;
+    outline: 2px solid red;
+    outline-offset: -1em;
+    padding-top: 1em;
+    padding-left: 1em;
+    color: white;
+    width: 40%;
+    height: 12em;
+    position: relative;
+    font-size: 1.5rem;
+    top: 10%;
+    left: 4%;
+}
+
+.interests-textbox h1 {
+    background-color: black;
+    color: red;
+    font-size: 2rem;
+    position: absolute;
+    transform: translateX(-50%);
+    top: .15em;
+    left: 50%;
+    padding: 0.2em;
+}
+
+ul.list1col li {
+    margin-top: 15%;
+}
+
+@media (min-width:60rem) {
+
+    .profile2 {
+        max-width: 100%;
+        height: auto;
+        width: 85vh;
+        margin-top: -39%;
+    }
+
+    .interests {
+        height: 100vh;
+    }
+
+    .interests-textbox {
+        outline: 6px solid red;
+        outline-offset: -1.2em;
+        font-size: 3rem;
+        padding-top: 1.5em;
+        padding-left: 2.5em;
+    }
+    
+    .interests-textbox h1 {
+        font-size: 4rem;
+        top: .25em;
+        left: 50%;
+    }
+
+    ul.list1col li {
+        margin-top: 1.2em;
+    }
+
+
+}
+
+/* Fourth Section - Future */
+
+.future {
+    background-image: url(../img/bg4.png);
+    background-size: cover;
+    background-position: center;
+    max-width: 100%;
+    height: 400px;
+}
+
+@media (min-width:60rem) {
+
+    .future {
+        height: 100vh;
+    }
+
+}
 
 
 
