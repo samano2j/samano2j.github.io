@@ -17,17 +17,21 @@ img {
 	height: auto;
 }
 
+
 .container {
     width: 95%;
     margin: 0 auto;
 }
+
 
 /* typography */
 
 h1 {
 	font-weight: 300;
 	font-size: 2rem;
-	margin-top: 0;
+    margin-top: 0;
+    color: white;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 }
 
 .title {
@@ -64,7 +68,7 @@ nav li {
     margin: 1em;
 }
 
-nav a {
+nav.header-menu a {
     font-weight: 900;
     text-decoration: none;
     font-size: 1.4rem;
@@ -85,12 +89,12 @@ nav a:focus {
         float: left;
 	}
 
-	nav {
+	nav.header-menu {
 		padding-top: 2.5em;
         float: right;
     }
     
-    nav a {
+    nav.header-menu a {
         font-size: 2.5rem;
     }
 }
@@ -103,9 +107,7 @@ nav a:focus {
 	background-position: center;
     padding: 8em;
     padding-top: 14em;
-    color: white;
     text-align: center;
-    text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
 }
 
 @media (min-width:60rem) {
@@ -273,7 +275,7 @@ ul.list1col li {
         max-width: 100%;
         height: auto;
         width: 85vh;
-        margin-top: -39%;
+        margin-top: -41%;
     }
 
     .interests {
@@ -284,8 +286,9 @@ ul.list1col li {
         outline: 6px solid red;
         outline-offset: -1.2em;
         font-size: 3rem;
-        padding-top: 1.5em;
+        padding-top: 1.2em;
         padding-left: 2.5em;
+        top: 15%;
     }
     
     .interests-textbox h1 {
@@ -309,15 +312,68 @@ ul.list1col li {
     background-position: center;
     max-width: 100%;
     height: 400px;
+    text-align: center;
 }
 
+.future h1 {
+    font-size: 4em;
+    padding-top: 2.5em;
+    
+}
 @media (min-width:60rem) {
 
     .future {
         height: 100vh;
     }
 
+    .future h1 {
+        font-size: 9em;
+        padding-top: 2em;
+    }
+
 }
 
+/* Fifth Section - Footer */
 
+.footer {
+    background-image: url(../img/bg5.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    text-align: center;
+}
 
+.footer h1 {
+    font-size: 2.5rem;
+    padding-top: 1em;
+}
+
+.footer-social {
+    margin-top: -2.2em;
+}
+
+.footer-social a {
+    padding: 2em;
+}
+
+.facebook, .twitter, .github, .linkedin {
+    height: 50px;
+    width: 50px;
+}
+
+@media (min-width:60rem) {
+    .footer {
+        height: 45vh;
+    }
+
+    .footer h1 {
+        font-size: 4rem;
+        padding-top: 1.2em;
+    }
+
+    .facebook, .twitter, .github, .linkedin {
+        height: auto;
+        width: 15vh;
+    }
+
+}
