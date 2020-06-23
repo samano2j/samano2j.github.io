@@ -5,7 +5,6 @@
 
 * {
     box-sizing: border-box;
-    /*transition: all ease-in-out 250ms;*/
 }
 
 body {
@@ -18,13 +17,6 @@ img {
 	height: auto;
 }
 
-
-.container {
-    width: 95%;
-    margin: 0 auto;
-}
-
-
 /* typography */
 
 h1 {
@@ -35,15 +27,21 @@ h1 {
     text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 }
 
-.title {
-    font-size: 2.5rem;
+p {
+    margin-left: 1em;
 }
 
-@media (min-width:60rem) {
-    .title {
-        font-size: 10rem;
-    }
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
+
+nav li {
+    display: inline-block;
+    margin: 1em;
+}
+
 /* header */
 
 .logo {
@@ -58,17 +56,6 @@ header {
     text-align: center;
 }
 
-nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-nav li {
-    display: inline-block;
-    margin: 1em;
-}
-
 nav.header-menu a {
     font-weight: 900;
     text-decoration: none;
@@ -80,7 +67,7 @@ nav.header-menu a {
 
 nav a:hover,
 nav a:focus {
-	color: #ddd;
+	color: red;
 }
 
 @media (min-width:60rem) {
@@ -111,11 +98,19 @@ nav a:focus {
     text-align: center;
 }
 
+.title {
+    font-size: 2.5rem;
+}
+
 @media (min-width:60rem) {
     .welcome {
         padding: 4em;
         padding-top: 20em;
         height: 100vh;
+    }
+
+    .title {
+        font-size: 10rem;
     }
 }
 
@@ -138,13 +133,13 @@ nav a:focus {
     background-color: black;
     outline: 2px solid red;
     outline-offset: -1.5em;
-    padding: 2em;
-    color: white;
-    width: 50%;
-    height: 25%;
-    margin-left: 48%;
     position: relative;
+    height: 25%;
+    width: 50%;
+    margin-left: 48%;
+    padding: 1.5em;
     font-size: 1rem;
+    color: white;
 }
 
 .life-textbox1 {
@@ -244,15 +239,15 @@ ul.list2col li {
     background-color: black;
     outline: 2px solid red;
     outline-offset: -1em;
-    padding-top: 1em;
-    padding-left: 1em;
-    color: white;
-    width: 40%;
-    height: 12em;
     position: relative;
-    font-size: 1.5rem;
+    height: 12em;
+    width: 40%;
     top: 10%;
     left: 4%;
+    padding-top: 1em;
+    padding-left: 1em;
+    font-size: 1.5rem;
+    color: white;
 }
 
 .interests-textbox h1 {
@@ -364,12 +359,12 @@ ul.list1col li {
 
 @media (min-width:60rem) {
     .footer {
-        height: 45vh;
+        height: 40vh;
     }
 
     .footer h1 {
         font-size: 4rem;
-        padding-top: 1.2em;
+        padding-top: 1em;
     }
 
     .facebook, .twitter, .github, .linkedin {
