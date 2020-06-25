@@ -5,45 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>My Homepage</title>
     <link href="css/style.css" rel="stylesheet" type="text/css">
-   <!--<script
-    src="https://code.jquery.com/jquery-2.2.4.min.js"
-    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-    crossorigin="anonymous"></script>--> 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/parallax.js"></script>
 </head>
 <body>
 
 <header>
-    <img src="img/logo.png" alt="Phantom logo" class="logo">
-    <nav class="header-menu">
-        <ul>
-            <li><a href="">HOME</a></li>
-            <li><a href="">INTERESTS</a></li>
-            <li><a href="">FAQ</a></li>
-            <li><a href="">CONTACT</a></li>
-        </ul>
-    </nav>
+    <div class="container">
+        <img src="img/logo.png" alt="Phantom Logo" class="logo">
+        <nav class="header-menu">
+            <ul>
+                <li><a href="">Who am I?</a></li>
+                <li><a href="">Backstory</a></li>
+                <li><a href="">Skillset</a></li>
+                <li><a href="">Interest</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
 </header>
 
 <section class="welcome parallax--bg">
-		<h1 class="title">Welcome to my Webpage</h1>
+    <div class="container">
+     <h1 class="title">Welcome to my Webpage</h1>
+    </div>
 </section>
 
-<section class="life">
-    <div class="life-profile">
-        <img src="img/profile1.jpg" alt="Profile1" class="profile1">
-    </div>
-    <div class="life-textbox1">
+<section class="who">
         <h1>Who am I?</h1>
-        <p> A simple yet diligent individual who graduated with a degree in Software Systems Engineering. </p>
+        <div class="who-textbox">
+        <p> I am just a simple yet diligent individual who graduated with distinction in Software Systems Engineering.  
+            Furthermore, I am interested in code programming, solving complicated problems, and building efficient solutions.
+            I am Joe Samano. </p>
+        </div>
+</section>
+
+<section class="backstory">
+    <h1>Backstory</h1>
+    <div class="backstory-textbox">
+        <p>There is a saying, ”Curiosity killed the cat”. You sure you wanna know?</p>
+        <button>Of course, Bring it!</button>
     </div>
-    <div class="life-textbox2">
-        <h1>Backstory</h1>
-        <p>Grew up in Dubai, UAE to living in Canada.</p>
-    </div>
-    <div class="life-textbox3">
-        <h1>Skillset</h1>
+</section>
+
+<section class="skillset">
+    <h1>Skillset</h1>
+    <div class="skillset-textbox">
         <ul class="list2col">
             <li>C</li>
             <li>C++</li>
@@ -59,27 +66,21 @@
     </div>
 </section>
 
-<section class="interests">
-    <div class="interests-profile">
-        <img src="img/profile2.png" alt="Profile2" class="profile2">
-    </div>
-    <div class="interests-textbox">
-        <h1>Interests</h1>
-            <ul class="list1col">
-                <li>Light Novel</li>
-                <li>Manga/Manhwa</li>
-                <li>Anime</li>
-                <li>Game</li>
-            </ul>
-    </div>
+<section class="interest">
+    <h1>Interest</h1>
+    <button>Anime</button>
+    <button>Game</button>
+    <button>Light Novel</button>
+    <button>Manga/Manhwa</button>
 </section>
 
-<section class="future">
-    <h1>Coming Soon</h1>
-</section>
+<div class="future">
+    <img src="img/coming-soon.png" alt="Coming Soon" class="coming-soon">
+    <p>For More...</p>
+</div>
 
-<section class="footer">
-    <h1>Follow Us</h1>
+<footer>
+    <h1>Contact</h1>
     <nav class="footer-social">
         <ul>
             <li><a href=""><img src="img/facebook.png" alt="Facebook" class="facebook"></a></li>
@@ -88,7 +89,7 @@
             <li><a href=""><img src="img/linkedin.png" alt="Linkedin" class="linkedin"></a></li>
         </ul>
     </nav>
-</section>
-        
+</footer>
+
 </body>
 </html>
