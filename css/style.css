@@ -130,14 +130,14 @@ nav a:focus {
 
 /* Secont Section - Who am I? */
 
-.who {
+.whoami {
     background-image: url(../img/bg2.png);
     background-size: cover;
     background-position: -15rem;
     height: 100vh;
 }
 
-.who h1 {
+.whoami h1 {
     width: 65%;
     float: left;
     margin-top: 2em;
@@ -145,7 +145,7 @@ nav a:focus {
     transform: rotate(-5deg);
 }
 
-.who-textbox {
+.whoami-textbox {
     background-color: black;
     width: 75%;
     float: left;
@@ -159,11 +159,11 @@ nav a:focus {
 }
 
 @media (min-width:60rem) {
-    .who {
+    .whoami {
         background-position: 0;
     }
 
-    .who h1 {
+    .whoami h1 {
         float: right;
         margin-top: 1em;
         margin-right: 2.5em;
@@ -172,7 +172,7 @@ nav a:focus {
         box-shadow: 20px -20px #E00000;
     }
 
-    .who-textbox {
+    .whoami-textbox {
         float: right;
         margin-right: 4.5em;
         width: 40%;
