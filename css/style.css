@@ -58,6 +58,15 @@ nav li {
 	transition: initial;
 }
 
+/* Transition */
+.transition {
+    background-image: url(../img/transition.png);
+    background-color: #E00000;
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+}
+
 /* Header */
 
 .logo {
@@ -194,8 +203,8 @@ nav a:focus {
 .backstory h1 {
     width: 65%;
     float: left;
-    margin-top: 6em;
-    margin-left: 15%;
+    margin-top: 2.5em;
+    margin-left: 1.5em;
     transform: rotate(-5deg);
 }
 
@@ -203,10 +212,9 @@ nav a:focus {
     background-color: black;
     width: 75%;
     float: left;
-    margin-left: 15%;
-    font-size: 2.5rem;
+    margin-left: 1.5em;
+    font-size: 2.3rem;
     padding: 0 0.25em;
-    margin-right: 1rem;
     box-shadow: 15px -15px #E00000;
     transform: rotate(-5deg);
 }
@@ -248,7 +256,7 @@ nav a:focus {
         margin-top: -0.75em;
         margin-left: 4em;
         font-size: 2.5rem;
-        padding: 0 0 3em 1em;
+        padding: 0 0 1em 1em;
         margin-right: 1rem;
         box-shadow: 20px -20px #E00000;
         transform: rotate(5deg);
