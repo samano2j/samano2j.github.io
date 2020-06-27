@@ -13,6 +13,10 @@ function parallax() {
 }
 
 $(document).ready(function(){
+    $('#music').click(function() {
+        $('#audio').attr('src','audio/Life Will Change.mp3');
+    })
+
     $('#backstory-btn').click(function() {
         backstory();
         $(this).remove();

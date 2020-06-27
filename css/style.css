@@ -82,7 +82,7 @@ header {
 
 nav.header-menu a {
     font-size: 1.7rem;
-    padding: 0 1em;
+    padding: 0 0.5em;
     color: white;
     text-decoration: none;
     text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
@@ -93,20 +93,43 @@ nav a:focus {
 	color: #E00000;
 }
 
+.music {
+    display: none;
+}
+
 @media (min-width:60rem) {
 	.logo {
-		max-width: 12rem;
+        max-width: 12rem;
+        margin-left: -1em;
         float: left;
     }
 
 	nav.header-menu {
         padding-top: 3em;
-        float: right;
+        float: left;
+        margin-left: 4em;
     }
     
     nav.header-menu a {
         font-size: 2.5rem;
     }
+
+    .music {
+        display: initial;
+        position: fixed;
+        margin-top: 1.5em;
+        background-image: url(../img/music1.png);
+        top:0;
+        right:0;
+        margin-right: 2em;
+        height: 8em;
+        width: 8em;
+    }
+
+    .music:hover {
+        background-image: url(../img/music2.png);
+    }
+
 }
 
 /* First Section - Welcome */
