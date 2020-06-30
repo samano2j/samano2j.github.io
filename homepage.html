@@ -9,10 +9,9 @@
     <script src="js/script.js"></script>
 </head>
 <body>
-<!--audio/Price.mp3 -->
-
+    
 <audio id="audio" loop autoplay>
-    <source src="">
+    <source src="audio/Price.mp3">
 </audio>
 
 
@@ -29,9 +28,35 @@
             </ul>
         </nav>
     </div>
-</header>
 
-<div class="music" id="music"></div>
+    <div class="music" id="music"></div>
+
+    <div class="music-menu" id="music-menu">
+        <ul>
+            <li id="music1">Butterfly Kiss</li>
+            <li id="music2">Ideal and the Real</li>
+            <li id="music3">Life Will Change</li>
+            <li id="music4">Price</li>
+            <li id="music5">Royal Days</li>
+            <li id="music6">So Boring</li>
+            <li id="music7">Tokyo Daylight</li>
+            <li id="music8">Stop</li>
+        </ul>
+    </div>
+<!--
+    <div>
+        <nav class="side-menu">
+            <ul>
+                <li><a href="#whoami" id="link1"></a></li>
+                <li><a href="#backstory" id="link2"></a></li>
+                <li><a href="#skillset" id="link3"></a></li>
+                <li><a href="#interest" id="link4"></a></li>
+                <li><a href="#contact" id="link5"></a></li>
+            </ul>
+        </nav>
+    </div>
+-->
+</header>
 
 <section class="welcome parallax--bg">
     <div class="container">
@@ -41,7 +66,7 @@
 
 <div class="transition parallax--bg"></div>
 
-<section class="whoami" id="whoami">
+<section class="whoami slide-in from-left" id="whoami">
         <h1>Who am I?</h1>
         <div class="whoami-textbox">
         <p> I am just a simple yet diligent individual who graduated with distinction in Software Systems Engineering.  
@@ -52,7 +77,7 @@
 
 <div class="transition parallax--bg"></div>
 
-<section class="backstory" id="backstory">
+<section class="backstory slide-in from-right" id="backstory">
     <h1>Backstory</h1>
     <div class="backstory-textbox">
         <p id="backstory-p">There is a saying, ”Curiosity killed the cat”. You sure you wanna know?</p>
@@ -62,7 +87,7 @@
 
 <div class="transition parallax--bg"></div>
 
-<section class="skillset" id="skillset">
+<section class="skillset slide-in from-left" id="skillset">
     <h1>Skillset</h1>
     <div class="skillset-textbox">
         <ul class="list2col">
@@ -82,7 +107,7 @@
 
 <div class="transition parallax--bg"></div>
 
-<section class="interest" id="interest">
+<section class="interest slide-in from-right" id="interest">
     <h1>Interest</h1>
     <button>Anime</button>
     <button>Game</button>
@@ -90,9 +115,43 @@
     <button>Manga/Manhwa</button>
 </section>
 
+<!--
+<section class="anime">
+    <div class="itemlist">
+        <img src="img/back-arrow.png" alt="Back Arrow" class="back-arrow">
+        <button>One Punch Man</button>
+        <button>One Piece</button>
+    </div>
+    <div class="description"><p></p></div>
+    <div class="item-image"><img></div>
+</section>
+
+<section class="game">
+    <div class="itemlist">
+        <button>Persona 5 Royal</button>
+        <button>Nier: Automata</button>
+    </div>
+    <div class="description"><p></p></div>
+    <div class="item-image"><img></div>
+</section>
+
+<div class="lightnovel">
+    <button>Overlord</button>
+    <button>Ascendance of Bookworm</button>
+    <div class="description"><p></p></div>
+    <div class="item-image"><img></div>
+</div>
+
+<div class="manga/manhwa">
+    <button>Solo Leveling</button>
+    <button>the Time I Got Reincarnated as a Slime </button>
+    <div class="description"><p></p></div>
+    <div class="item-image"><img></div>
+</div>
+-->
 <div class="transition parallax--bg"></div>
 
-<div class="future">
+<div class="future" id="future">
     <img src="img/coming-soon.png" alt="Coming Soon" class="coming-soon">
     <p>For More...</p>
 </div>

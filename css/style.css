@@ -11,6 +11,7 @@
 body {
 	margin: 0;
     font-family: 'p5hatty';
+    overflow-x: hidden;
 }
 
 img {
@@ -41,6 +42,10 @@ p {
     color: white;
 }
 
+a {
+    text-decoration: none;
+}
+
 nav ul {
     margin: 0;
     padding: 0;
@@ -64,7 +69,25 @@ nav li {
     background-color: #E00000;
     background-size: cover;
     background-position: center;
-    height: 80vh;
+    height: 60vh;
+}
+
+.from-left {
+    transform: translateX(-100%);
+}
+
+.from-right {
+    transform: translateX(100%);
+}
+
+.from-left, .from-right {
+    transition: opacity 250ms ease-in, transform 600ms ease-in;
+    opacity: 0;
+}
+
+.from-left.appear, .from-right.appear {
+    transform: translateX(0);
+    opacity: 1;
 }
 
 /* Header */
@@ -93,7 +116,7 @@ nav a:focus {
 	color: #E00000;
 }
 
-.music {
+.music-menu {
     display: none;
 }
 
@@ -107,7 +130,6 @@ nav a:focus {
 	nav.header-menu {
         padding-top: 3em;
         float: left;
-        margin-left: 4em;
     }
     
     nav.header-menu a {
@@ -115,21 +137,71 @@ nav a:focus {
     }
 
     .music {
-        display: initial;
         position: fixed;
         margin-top: 1.5em;
         background-image: url(../img/music1.png);
+        background-size: cover;
+        background-position: center;
         top:0;
         right:0;
-        margin-right: 2em;
-        height: 8em;
-        width: 8em;
+        margin-right: 0.5em;
+        height: 7em;
+        width: 7em;
+        cursor: pointer;
     }
 
     .music:hover {
         background-image: url(../img/music2.png);
     }
 
+    .music-menu ul {
+        background: black;
+        color: white;
+        font-size: 2em;
+        position: fixed;
+        top: 0;
+        right: 0;
+        margin-top: 5em;
+        margin-right: 1em;
+        box-shadow: 15px -15px #E00000;
+        list-style: none;
+        padding: 0;
+        z-index: 1;
+    }
+
+    .music-menu li {
+        padding: 0.5em;
+    }
+
+    .music-menu li:hover {
+        background-color: white;
+        color: #E00000;
+    }
+/*
+    .side-menu {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+    }
+
+    .side-menu li {
+        display: block;
+        margin-bottom: 6.5em;
+        margin-right: 3.5em;
+    }
+
+    .side-menu a {
+        background-color: white;
+        box-shadow: 6px -6px #E00000;
+        border: 6px solid black;
+        padding: 0.5em 1em;
+        cursor: pointer; 
+    }
+
+    .active, .side-menu a:hover {
+        background-color: #E00000;
+        box-shadow: 6px -6px white;
+    }*/
 }
 
 /* First Section - Welcome */
@@ -250,6 +322,7 @@ nav a:focus {
     margin-bottom: 1em;
     margin-left: 0.5em;
     width: 80%;
+    cursor: pointer;
 }
 
 .backstory button:hover {
@@ -353,7 +426,6 @@ ul.list2col {
     ul.list2col {
         float: left; 
         width: 100%; 
-        list-style: none;
     }
     
     ul.list2col li {
@@ -391,6 +463,7 @@ ul.list2col {
     margin: 0.5em 1.5em;
     font-size: 2.5rem;
     transform: rotate(-7deg);
+    cursor: pointer;
 }
 
 .interest button:hover {
@@ -422,6 +495,84 @@ ul.list2col {
         transform: rotate(-7deg);
         width: 25%;
     }
+/* 
+    .anime {
+        float: left;
+        content: "";
+        clear: both;
+        display: table;
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgb(0,0,0);
+        background-color: rgba(0,0,0, 0.9);
+    }
+  /*  
+    .anime {
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-image: url(../img/bg8.jpeg);
+        background-size: cover;
+        overflow-y: hidden;
+        transition: 0.5s;
+    }
+
+    .back {
+        width: 25%;
+        float: left;
+        padding: 15px;
+    }
+
+
+    .itemlist {
+        background-color: black;
+        width: 25%;
+        height: 100%;
+        float: left;
+    }
+
+    .itemlist button {
+        display:block;
+        background-color: transparent;
+        color: white;
+        padding: 2em 1em;
+        width: 100%;
+        border: none;
+        outline: none;
+        text-align: left;
+        cursor: pointer;
+        transition: 0.3s;
+        font-size: 2em;
+        font-family: 'p5hatty';
+    }
+
+    .itemlist button:hover {
+        background-color: #E00000;
+    }
+
+    .description {
+        background-color: white;
+        height:100%;
+        width: 40%;
+        float: left;
+        padding: 15px;
+    }
+    
+    .item-image {
+        background-image: url(../img/overlord.jpg);
+        background-size: cover;
+        height:100%;
+        width: 35%;
+        float: left;
+        padding: 15px;
+    }
+    */
 
 }
 
