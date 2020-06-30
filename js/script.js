@@ -48,6 +48,12 @@ window.onload = function(){
     slidersAfter.forEach(sliderAfter => {
         appearOnScrollAfter.observe(sliderAfter);
     });
+
+    // const sectionOne = document.querySelector(".whoami");
+    // const sectionOne = document.querySelector(".backstory");
+    // const sectionOne = document.querySelector(".skillset");
+    // const sectionOne = document.querySelector(".interest");
+    // const sectionOne = document.querySelector(".future");
 }
 
 
@@ -233,6 +239,16 @@ $(document).ready(function(){
         $('#link5').css('box-shadow','6px -6px white');
     })
 */
+
+    var scrollLink = $('.scroll');
+
+    //Smoorh scrolling
+    scrollLink.click(function(e) {
+        e.preventDefault();
+        $('body,html').animate({
+            scrollTop: $(this.hash).offset().top
+        }, 500 )
+    })
 })
 
 function backstory() {
