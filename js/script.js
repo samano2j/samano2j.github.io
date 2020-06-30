@@ -1,7 +1,6 @@
 
 window.onload = function(){
     const appearOptions = {
-        threshold: 0,
         rootMargin: "0px 0px -350px 0px"
     };
 
@@ -25,6 +24,29 @@ window.onload = function(){
 
     sliders.forEach(slider => {
         appearOnScroll.observe(slider);
+    });
+
+    const appearAfterOptions = {}
+    const slidersAfter = document.querySelectorAll(".slide-after");
+
+    const appearOnScrollAfter = new IntersectionObserver(function(
+        entries,
+        appearOnScrollAfter
+    ) {
+        entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+            return;
+        } else {
+            entry.target.classList.add("appearAfter");
+            appearOnScroll.unobserve(entry.target);
+        }
+        });
+    },
+    appearOptions);
+    
+
+    slidersAfter.forEach(sliderAfter => {
+        appearOnScrollAfter.observe(sliderAfter);
     });
 }
 

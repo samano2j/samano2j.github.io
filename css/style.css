@@ -81,11 +81,17 @@ nav li {
 }
 
 .from-left, .from-right {
-    transition: opacity 250ms ease-in, transform 600ms ease-in;
+    transition: opacity 250ms ease-in, transform 400ms ease-in;
     opacity: 0;
 }
 
 .from-left.appear, .from-right.appear {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.from-left.appearAfter, .from-right.appearAfter {
+    transition-delay: 350ms;
     transform: translateX(0);
     opacity: 1;
 }
@@ -148,6 +154,7 @@ nav a:focus {
         height: 7em;
         width: 7em;
         cursor: pointer;
+        z-index: 99;
     }
 
     .music:hover {
