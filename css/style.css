@@ -173,7 +173,7 @@ nav a:focus {
         box-shadow: 15px -15px #E00000;
         list-style: none;
         padding: 0;
-        z-index: 1;
+        z-index: 2;
     }
 
     .music-menu li {
@@ -184,11 +184,12 @@ nav a:focus {
         background-color: white;
         color: #E00000;
     }
-/*
+
     .side-menu {
         position: fixed;
         bottom: 0;
         right: 0;
+        z-index: 1;
     }
 
     .side-menu li {
@@ -205,10 +206,13 @@ nav a:focus {
         cursor: pointer; 
     }
 
-    .active, .side-menu a:hover {
+    .side-menu a.active, .side-menu a:hover {
         background-color: #E00000;
         box-shadow: 6px -6px white;
-    }*/
+    }
+
+    
+
 }
 
 /* First Section - Welcome */

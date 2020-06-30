@@ -49,11 +49,96 @@ window.onload = function(){
         appearOnScrollAfter.observe(sliderAfter);
     });
 
-    // const sectionOne = document.querySelector(".whoami");
-    // const sectionOne = document.querySelector(".backstory");
-    // const sectionOne = document.querySelector(".skillset");
-    // const sectionOne = document.querySelector(".interest");
-    // const sectionOne = document.querySelector(".future");
+    const sectionOne = document.querySelector(".whoami");
+    const sectionTwo = document.querySelector(".backstory");
+    const sectionThree = document.querySelector(".skillset");
+    const sectionFour = document.querySelector(".interest");
+    const sectionFive = document.querySelector(".future");
+
+    const sectionOneOptions = {rootMargin: "-200px 0px -200px 0px"};
+    const sectionTwoOptions = {rootMargin: "-200px 0px -200px 0px"};
+    const sectionThreeOptions = {rootMargin: "-200px 0px -200px 0px"};
+    const sectionFourOptions = {rootMargin: "-200px 0px -200px 0px"};
+    const sectionFiveOptions = {rootMargin: "-200px 0px -200px 0px"};
+
+    const sectionOneObserver = new IntersectionObserver(function(
+        entries,
+        sectionOneObserver
+      ) {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) {
+            $('#link1').removeClass("active");
+          } else {
+            $('#link1').addClass("active");
+          }
+        });
+      },
+      sectionOneOptions);
+
+      const sectionTwoObserver = new IntersectionObserver(function(
+        entries,
+        sectionTwoObserver
+      ) {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) {
+            $('#link2').removeClass("active");
+          } else {
+            $('#link2').addClass("active");
+          }
+        });
+      },
+      sectionTwoOptions);
+
+      const sectionThreeObserver = new IntersectionObserver(function(
+        entries,
+        sectionThreeObserver
+      ) {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) {
+            $('#link3').removeClass("active");
+          } else {
+            $('#link3').addClass("active");
+          }
+        });
+      },
+      sectionThreeOptions);
+
+      const sectionFourObserver = new IntersectionObserver(function(
+        entries,
+        sectionFourObserver
+      ) {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) {
+            $('#link4').removeClass("active");
+          } else {
+            $('#link4').addClass("active");
+          }
+        });
+      },
+      sectionFourOptions);
+
+      const sectionFiveObserver = new IntersectionObserver(function(
+        entries,
+        sectionFiveObserver
+      ) {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) {
+            $('#link5').removeClass("active");
+          } else {
+            $('#link5').addClass("active");
+          }
+        });
+      },
+      sectionFiveOptions);
+    
+
+    sectionOneObserver.observe(sectionOne);
+    sectionTwoObserver.observe(sectionTwo);
+    sectionThreeObserver.observe(sectionThree);
+    sectionFourObserver.observe(sectionFour);
+    sectionFiveObserver.observe(sectionFive);
+
+
 }
 
 
@@ -164,7 +249,7 @@ $(document).ready(function(){
     $('#music-menu').mouseleave(function() {
         $('#music-menu').hide();
     })
-/*
+
     for(i=1; i < 6; i++) {
         $('#link' + i).mouseenter(function() {
             var bleep = new Audio();
@@ -173,72 +258,11 @@ $(document).ready(function(){
         })
 
         $('#link' + i).click(function() {
-            for(i=1; i < 6; i++) {
-                $('#link' + i).css('background-color','white');
-                $('#link' + i).css('box-shadow','6px -6px #E00000');
-            }
-            $(this).css('background-color','#E00000');
-            $(this).css('box-shadow','6px -6px white');
             var select = new Audio();
             select.src = "audio/select.mp3"
             select.play();
         })
     }
-
-    $('#whoami').hover(function() {
-        for(i=1; i < 6; i++) {
-            $('#link' + i).css('background-color','white');
-            $('#link' + i).css('box-shadow','6px -6px #E00000');
-        }
-        $('#link1').css('background-color','#E00000');
-        $('#link1').css('box-shadow','6px -6px white');
-    })
-
-    $('#backstory').hover(function() {
-        for(i=1; i < 6; i++) {
-            $('#link' + i).css('background-color','white');
-            $('#link' + i).css('box-shadow','6px -6px #E00000');
-        }
-        $('#link2').css('background-color','#E00000');
-        $('#link2').css('box-shadow','6px -6px white');
-    })
-
-    $('#skillset').hover(function() {
-        for(i=1; i < 6; i++) {
-            $('#link' + i).css('background-color','white');
-            $('#link' + i).css('box-shadow','6px -6px #E00000');
-        }
-        $('#link3').css('background-color','#E00000');
-        $('#link3').css('box-shadow','6px -6px white');
-    })
-
-    $('#interest').hover(function() {
-        for(i=1; i < 6; i++) {
-            $('#link' + i).css('background-color','white');
-            $('#link' + i).css('box-shadow','6px -6px #E00000');
-        }
-        $('#link4').css('background-color','#E00000');
-        $('#link4').css('box-shadow','6px -6px white');
-    })
-
-    $('#future').hover(function() {
-        for(i=1; i < 6; i++) {
-            $('#link' + i).css('background-color','white');
-            $('#link' + i).css('box-shadow','6px -6px #E00000');
-        }
-        $('#link5').css('background-color','#E00000');
-        $('#link5').css('box-shadow','6px -6px white');
-    })
-
-    $('#contact').hover(function() {
-        for(i=1; i < 6; i++) {
-            $('#link' + i).css('background-color','white');
-            $('#link' + i).css('box-shadow','6px -6px #E00000');
-        }
-        $('#link5').css('background-color','#E00000');
-        $('#link5').css('box-shadow','6px -6px white');
-    })
-*/
 
     var scrollLink = $('.scroll');
 
