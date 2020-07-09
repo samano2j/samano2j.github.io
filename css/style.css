@@ -693,17 +693,14 @@ ul.list2col {
 @media (min-width:60rem) {
     .slime {
         background-image: url(../img/slime3.jpg);
-        height: 100%;
     }
 
     .solo {
         background-image: url(../img/solo3.jpg);
-        /* height: 100%; */
     }
 
     .opm {
         background-image: url(../img/opm3.png);
-        /* height: 100%;  */
     }
 
     .slime p, .solo p, .opm p{
