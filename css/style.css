@@ -8,10 +8,10 @@
     transition: all ease-in-out 250ms;
 }
 
-body {
+html, body {
 	margin: 0;
     font-family: 'p5hatty';
-    overflow-x: hidden;
+    overflow-x: hidden; 
 }
 
 img {
@@ -64,6 +64,7 @@ nav li {
 }
 
 /* Transition */
+
 .transition {
     background-image: url(../img/transition.png);
     background-color: #E00000;
@@ -158,7 +159,7 @@ nav a:focus {
         height: 7em;
         width: 7em;
         cursor: pointer;
-        z-index: 99;
+        z-index: 5;
     }
 
     .music:hover {
@@ -511,6 +512,246 @@ ul.list2col {
         transform: rotate(-7deg);
         width: 25%;
     }
+}
+
+/* Manga Section */
+
+.close {
+    z-index: 11;
+    width: 20%;
+    margin-left: 80%;
+    padding: 1em;
+    cursor: pointer;
+}
+
+
+.manga {
+    background-image: url(../img/bg9.png);
+    background-size: cover;
+    background-position: center;
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+
+.manga h1 {
+    position: absolute;
+    width: 100%;
+    box-shadow: none;
+    background: rgba(0, 0, 0, 0.6);
+    padding-bottom: 90vh;
+    z-index: 1;
+}
+
+.manga-item-1, .manga-item-2, .manga-item-3 {
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    width: 90%;
+    height: 24vh;
+    float: left;
+    margin-top: 1em;
+    margin-left: 5%;
+    position: relative;
+    z-index: 2;
+}
+
+.manga-item-1 {
+    margin-top: 4em;
+    background-image: url(../img/slime1.png);
+    cursor: pointer;
+}
+
+.manga-item-2 {
+    background-image: url(../img/solo1.jpg);
+    cursor: pointer;
+}
+
+.manga-item-3 {
+    background-image: url(../img/opm1.jpg);
+    cursor: pointer;
+}
+
+.manga-name {
+    font-size: 2em;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 1em 0;
+    margin-top: 30.5%;
+    position: relative;
+    z-index: 1;
+}
+
+@media (min-width:60rem) {
+    .close {
+        z-index: 10;
+        width: 7%;
+        margin: 0.5em 0.5em;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .manga h1 {
+        position: absolute;
+        padding-top: 0.3em;
+        padding-bottom: 90vh;
+        margin-top: 13vh;
+        z-index: 1;
+        font-size: 5em;
+    }
+
+    .manga-item-1, .manga-item-2, .manga-item-3 {
+        width: 32%;
+        height: 60vh;
+        margin-top: 15em;
+        margin-left: 1em;
+        z-index: 2;
+    }
+    
+    .manga-name {
+        font-size: 3em;
+        background: rgba(0, 0, 0, 0.6);
+        padding: 0.2em 0.5em 0.8em 0.5em;
+        margin-top: 46.8vh;
+        transform: translateY(150%);
+        opacity: 0;
+    }
+
+    .manga-item-2 p, .manga-item-3 p {
+        font-size: 4em;
+    }
+
+    .manga-item-1:hover .manga-name,
+    .manga-item-2:hover .manga-name,
+    .manga-item-3:hover .manga-name {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+/* Slime, Solo, OPM Section */
+
+.slime, .solo, .opm{
+    background-size: cover;
+    background-position: center;
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+
+.slime {
+    background-image: url(../img/slime2.jpg);
+}
+
+.solo {
+    background-image: url(../img/solo2.png);
+}
+
+.opm {
+    background-image: url(../img/opm2.jpg);
+}
+
+.slime h1, .solo h1, .opm h1 {
+    position: absolute;
+    width: 100%;
+    box-shadow: none;
+    background: rgba(0, 0, 0, 0.6);
+    padding-top: 0.5em;
+    padding-bottom: 90vh;
+    z-index: 1;
+    font-size: 2.5rem;
+}
+
+.slime p, .opm p {
+    font-size: 2em;
+    padding: 1em 0;
+    margin: 4em 1em 1em 1.5em;
+    position: relative;
+    z-index: 1;
+    text-indent: 2rem;
+}
+
+.solo p {
+    font-size: 1.5em;
+    padding: 1em 0;
+    margin: 2.5em 1em 1em 1.5em;
+    position: relative;
+    z-index: 1;
+    text-indent: 2rem;
+}
+
+@media (min-width:60rem) {
+    .slime {
+        background-image: url(../img/slime3.jpg);
+        height: 100%;
+    }
+
+    .solo {
+        background-image: url(../img/solo3.jpg);
+        /* height: 100%; */
+    }
+
+    .opm {
+        background-image: url(../img/opm3.png);
+        /* height: 100%;  */
+    }
+
+    .slime p, .solo p, .opm p{
+        float: left;
+        margin-top: 27vh;
+        width: 50%;
+        padding-top: 0;
+        padding-left: 15%;
+        font-size: 2.5em;
+    }
+
+    .solo p{
+        font-size: 1.8em;
+    }
+
+    .slime-pic, .solo-pic, .opm-pic{
+        margin-top: 27vh;
+        float: left;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 70vh;
+        width: 30%;
+        position: relative;
+        z-index: 1;
+    }
+
+    .slime-pic {
+        background-image: url(../img/slime2.jpg);
+    }
+    
+    .solo-pic {
+        background-image: url(../img/solo2.png);
+    }
+    
+    .opm-pic {
+        background-image: url(../img/opm2.jpg);
+    }
+
+    .slime h1, .solo h1, .opm h1 {
+        position: absolute;
+        padding-top: 0.3em;
+        padding-bottom: 90vh;
+        margin-top: 13vh;
+        z-index: 1;
+        font-size: 5em;
+    }
+
 }
 
 /* Sixth Section - Future */

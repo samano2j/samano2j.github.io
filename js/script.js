@@ -22,7 +22,6 @@ window.onload = function(){
             return;
         } else {
             entry.target.classList.add("appear");
-            console.log(entry.target.className);
             if(entry.target.classList.contains('whoami')) {
               $('#link1').addClass("active");
             }
@@ -148,7 +147,7 @@ $(document).ready(function(){
         })
     }
 
-    /* Smoorh scrolling to Links within Page */
+    /* Smooth scrolling to Links within Page */
     var scrollLink = $('.scroll');
     scrollLink.click(function(e) {
         e.preventDefault();
@@ -156,6 +155,69 @@ $(document).ready(function(){
             scrollTop: $(this.hash).offset().top
         }, 500 )
     })
+
+    /* Show Manga/Manhwa Section */
+    $('#interest-item-4').click(function() {
+        $(".manga").css("height", "100%");
+        selectSound();
+    })
+
+    /* Show Slime Section */
+    $('.manga-item-1').click(function() {
+        $(".slime").css("height", "100%");
+        selectSound();
+    })
+
+    /* Show Solo Section */
+    $('.manga-item-2').click(function() {
+        $(".solo").css("height", "100%");
+        selectSound();
+    })
+
+    /* Show OPM Section */
+    $('.manga-item-3').click(function() {
+        $(".opm").css("height", "100%");
+        selectSound();
+    })
+
+    /* Close Manga/Manhwa Section */
+    $('#close1').click(function() {
+        $(".manga").css("height", "0%");
+        selectSound();
+    })
+
+    /* Close Slime Section */
+    $('#close2').click(function() {
+        $(".slime").css("height", "0%");
+        selectSound();
+    })
+
+    /* Close Solo Section */
+    $('#close3').click(function() {
+        $(".solo").css("height", "0%");
+        selectSound();
+    })
+
+    /* Close OPM Section */
+    $('#close4').click(function() {
+        $(".opm").css("height", "0%");
+        selectSound();
+    })
+
+    var i;
+    for(i = 1; i < 5; i++) {
+
+        /* Change Pic when Hovering on Close Button */
+        $('.close').mouseenter(function() {
+            $("#close" + i).attr("src", "img/close-btn1.png");
+            hoverSound();
+        })
+
+        $('.close').mouseleave(function() {
+            $("#close" + i).attr("src", "img/close-btn.png");
+        })
+        
+    }
 
 })
 
