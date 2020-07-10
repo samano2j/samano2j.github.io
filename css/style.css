@@ -559,22 +559,25 @@ ul.list2col {
     margin-left: 5%;
     position: relative;
     z-index: 2;
+    opacity: 0;
+    transform: translateY(30%);
+    transition: 1.5s;
+    cursor: pointer;
 }
 
 .manga-item-1 {
     margin-top: 4em;
     background-image: url(../img/slime1.png);
-    cursor: pointer;
 }
 
 .manga-item-2 {
     background-image: url(../img/solo1.jpg);
-    cursor: pointer;
+    transition-delay: 0.25s;
 }
 
 .manga-item-3 {
     background-image: url(../img/opm1.jpg);
-    cursor: pointer;
+    transition-delay: 0.5s;
 }
 
 .manga-name {
@@ -603,6 +606,8 @@ ul.list2col {
         margin-top: 13vh;
         z-index: 1;
         font-size: 5em;
+        transition: 2s;
+        transition-delay: 2.5s;
     }
 
     .manga-item-1, .manga-item-2, .manga-item-3 {
@@ -636,7 +641,7 @@ ul.list2col {
 
 /* Slime, Solo, OPM Section */
 
-.slime, .solo, .opm{
+.slime, .solo, .opm {
     background-size: cover;
     background-position: center;
     height: 0%;
@@ -646,7 +651,8 @@ ul.list2col {
     top: 0;
     left: 0;
     overflow-y: hidden;
-    transition: 0.5s;
+    transition: 1s;
+    transition-delay: 0.5s;
 }
 
 .slime {
@@ -670,6 +676,16 @@ ul.list2col {
     padding-bottom: 90vh;
     z-index: 1;
     font-size: 2.5rem;
+    transform: translateY(150%);
+    transition: 1.5s;
+    transition-delay: 0.5s;
+}
+
+.slime p, .solo p, .opm p {
+    opacity: 0;
+    transform: translateY(30%);
+    transition: 2s;
+    transition-delay: 1.5s;
 }
 
 .slime p, .opm p {
@@ -691,6 +707,11 @@ ul.list2col {
 }
 
 @media (min-width:60rem) {
+    .slime, .solo, .opm {
+        transition: 2s;
+        transition-delay: 2.5s;
+    }
+
     .slime {
         background-image: url(../img/slime3.jpg);
     }
@@ -710,6 +731,7 @@ ul.list2col {
         padding-top: 0;
         padding-left: 15%;
         font-size: 2.5em;
+        transition-delay: 5s;
     }
 
     .solo p{
@@ -726,6 +748,10 @@ ul.list2col {
         width: 30%;
         position: relative;
         z-index: 1;
+        transition: 2s;
+        opacity: 0;
+        transform: translateX(30%);
+        transition-delay: 5s;
     }
 
     .slime-pic {
@@ -747,6 +773,7 @@ ul.list2col {
         margin-top: 13vh;
         z-index: 1;
         font-size: 5em;
+        transition-delay: 4.5s;
     }
 
 }

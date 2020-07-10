@@ -92,19 +92,23 @@ $(document).ready(function(){
 
     /* Adding Background Music and Changing Background Color */
     $('#music1').click(function() {
-        musicColor('Ideal and the Real.mp3', 'blue');
+        music('Ideal and the Real.mp3');
+        color('blue');
     })
 
     $('#music2').click(function() {
-        musicColor('Price.mp3', 'yellow');
+        music('Price.mp3');
+        color('yellow');
     })
 
     $('#music3').click(function() {
-        musicColor('Tokyo Daylight.mp3', 'lime');
+        music('Tokyo Daylight.mp3');
+        color('lime');
     })
 
     $('#music4').click(function() {
-        musicColor('', '#222222');
+        music('');
+        color('#222222');
     })
 
     /* Adding Background Description */
@@ -159,65 +163,168 @@ $(document).ready(function(){
     /* Show Manga/Manhwa Section */
     $('#interest-item-4').click(function() {
         $(".manga").css("height", "100%");
-        selectSound();
-    })
-
-    /* Show Slime Section */
-    $('.manga-item-1').click(function() {
-        $(".slime").css("height", "100%");
-        selectSound();
-    })
-
-    /* Show Solo Section */
-    $('.manga-item-2').click(function() {
-        $(".solo").css("height", "100%");
-        selectSound();
-    })
-
-    /* Show OPM Section */
-    $('.manga-item-3').click(function() {
-        $(".opm").css("height", "100%");
+        for (i = 1; i < 4; i++) {
+            $('.manga-item-' + i).css({"opacity": "1","transform": "translateY(0%)"});
+        }
         selectSound();
     })
 
     /* Close Manga/Manhwa Section */
     $('#close1').click(function() {
         $(".manga").css("height", "0%");
+        for (i = 1; i < 4; i++) {
+            $('.manga-item-' + i).css({"opacity": "0","transform": "translateY(30%)"});
+        }
+        $('.manga-item-1').css("transition-delay", "0s");
+        $('.manga-item-2').css("transition-delay", "0.25s");
+        $('.manga-item-3').css("transition-delay", "0.5s");
         selectSound();
+    })
+
+    /* Show Slime Section */
+    $('.manga-item-1').click(function() {
+        if (document.documentElement.clientWidth < 900) {
+            $(".slime").css("height", "100%");
+            $(".slime h1").css("transform", "translateY(0%)");
+            $(".slime p").css({"opacity": "1", "transform": "translateY(0%)"});
+        }
+        else {
+            $('.manga-item-1').css({"transform": "translateX(100%)", "transition-delay": "1s"});
+            $(".manga h1").css({"transform": "translateY(0%)", "transition-delay": "2.5s"});
+            $(".slime").css({"height": "0%", "transition": "2s", "transition-delay": "2.5s"});
+            $(".manga h1").css("transform", "translateY(150%)");
+            $(".slime").css("height", "100%");
+            $('.manga-item-2').css({"opacity": "0","transform": "translateY(-10%)", "transition-delay": "0.25s"});
+            $('.manga-item-3').css({"opacity": "0","transform": "translateY(-10%)", "transition-delay": "0.50s"});
+            $(".slime h1").css("transform", "translateY(0%)");
+            $(".slime p").css({"opacity": "1", "transform": "translateY(0%)"});
+            $(".slime-pic").css({"opacity": "1", "transform": "translateX(0%)"});
+        }
+        selectSound();
+        music('Slime.mp3');
     })
 
     /* Close Slime Section */
     $('#close2').click(function() {
-        $(".slime").css("height", "0%");
+        if (document.documentElement.clientWidth < 900) {
+            $(".slime").css("height", "0%");
+            $(".slime h1").css("transform", "translateY(150%)");
+            $(".slime p").css({"opacity": "0", "transform": "translateY(30%)"});
+        }
+        else {
+            $('.manga-item-1').css("transform", "translateX(0%)");
+            $(".manga h1").css({"transform": "translateY(0%)", "transition-delay": "0.5s"});
+            $(".slime").css({"height": "0%", "transition": "1s", "transition-delay": "1s"});
+            $('.manga-item-2').css({"opacity": "1","transform": "translateY(0%)"});
+            $('.manga-item-3').css({"opacity": "1","transform": "translateY(0%)"});
+            $(".slime h1").css("transform", "translateY(150%)");
+            $(".slime p").css({"opacity": "0", "transform": "translateY(30%)"});
+            $(".solo-pic").css({"opacity": "0", "transform": "translateX(30%)"});
+        }
         selectSound();
+        music('');
+    })
+
+    /* Show Solo Section */
+    $('.manga-item-2').click(function() {
+        if (document.documentElement.clientWidth < 900) {
+            $(".solo").css("height", "100%");
+            $(".solo h1").css("transform", "translateY(0%)");
+            $(".solo p").css({"opacity": "1", "transform": "translateY(0%)"});
+        }
+        else {
+            $('.manga-item-2').css({"transition-delay": "1s"});
+            $(".manga h1").css({"transform": "translateY(0%)", "transition-delay": "2.5s"});
+            $(".solo").css({"height": "0%", "transition": "2s", "transition-delay": "2.5s"});
+            $(".manga h1").css("transform", "translateY(150%)");
+            $(".solo").css("height", "100%");
+            $('.manga-item-1').css({"opacity": "0","transform": "translateY(-10%)", "transition-delay": "0.25s"});
+            $('.manga-item-3').css({"opacity": "0","transform": "translateY(-10%)", "transition-delay": "0.50s"});
+            $(".solo h1").css("transform", "translateY(0%)");
+            $(".solo p").css({"opacity": "1", "transform": "translateY(0%)"});
+            $(".solo-pic").css({"opacity": "1", "transform": "translateX(0%)"});
+        }
+        selectSound();
+        music('Army of the King.mp3');
     })
 
     /* Close Solo Section */
     $('#close3').click(function() {
-        $(".solo").css("height", "0%");
+        if (document.documentElement.clientWidth < 900) {
+            $(".solo").css("height", "0%");
+            $(".solo h1").css("transform", "translateY(150%)");
+            $(".solo p").css({"opacity": "0", "transform": "translateY(30%)"});
+        }
+        else {
+            $(".manga h1").css({"transform": "translateY(0%)", "transition-delay": "0.5s"});
+            $(".solo").css({"height": "0%", "transition": "1s", "transition-delay": "1s"});
+            $('.manga-item-1').css({"opacity": "1","transform": "translateY(0%)"});
+            $('.manga-item-3').css({"opacity": "1","transform": "translateY(0%)"});
+            $(".solo h1").css("transform", "translateY(150%)");
+            $(".solo p").css({"opacity": "0", "transform": "translateY(30%)"});
+            $(".solo-pic").css({"opacity": "0", "transform": "translateX(30%)"});
+        }
         selectSound();
+        music('');
+    })
+
+    /* Show OPM Section */
+    $('.manga-item-3').click(function() {
+        if (document.documentElement.clientWidth < 900) {
+            $(".opm").css("height", "100%");
+            $(".opm h1").css("transform", "translateY(0%)");
+            $(".opm p").css({"opacity": "1", "transform": "translateY(0%)"});
+        }
+        else {
+            $('.manga-item-3').css({"transform": "translateX(-100%)", "transition-delay": "1s"});
+            $(".manga h1").css({"transform": "translateY(0%)", "transition-delay": "2.5s"});
+            $(".opm").css({"height": "0%", "transition": "2s", "transition-delay": "2.5s"});
+            $(".manga h1").css("transform", "translateY(150%)");
+            $(".opm").css("height", "100%");
+            $('.manga-item-1').css({"opacity": "0","transform": "translateY(-10%)", "transition-delay": "0.25s"});
+            $('.manga-item-2').css({"opacity": "0","transform": "translateY(-10%)", "transition-delay": "0.50s"});
+            $(".opm h1").css("transform", "translateY(0%)");
+            $(".opm p").css({"opacity": "1", "transform": "translateY(0%)"});
+            $(".opm-pic").css({"opacity": "1", "transform": "translateX(0%)"});
+        }
+        selectSound();
+        music('OPM.mp3');
     })
 
     /* Close OPM Section */
     $('#close4').click(function() {
-        $(".opm").css("height", "0%");
+        if (document.documentElement.clientWidth < 900) {
+            $(".opm").css("height", "0%");
+            $(".opm h1").css("transform", "translateY(150%)");
+            $(".opm p").css({"opacity": "0", "transform": "translateY(30%)"});
+        }
+        else {
+            $('.manga-item-3').css("transform", "translateX(0%)");
+            $(".manga h1").css({"transform": "translateY(0%)", "transition-delay": "0.5s"});
+            $(".opm").css({"height": "0%", "transition": "1s", "transition-delay": "1s"});
+            $('.manga-item-1').css({"opacity": "1", "transform": "translateY(0%)"});
+            $('.manga-item-2').css({"opacity": "1", "transform": "translateY(0%)"});
+            $(".opm h1").css("transform", "translateY(150%)");
+            $(".opm p").css({"opacity": "0", "transform": "translateY(30%)"});
+            $(".opm-pic").css({"opacity": "0", "transform": "translateX(30%)"});
+        }
         selectSound();
+        music('');
     })
 
-    var i;
-    for(i = 1; i < 5; i++) {
+    /* Change Pic when Hovering on Close Button */
+    $('.close').mouseenter(function() {
+        for(i = 1; i < 5; i++) {
+            $('#close' + i).attr("src", "img/close-btn1.png");
+        }
+        hoverSound();
+    })
 
-        /* Change Pic when Hovering on Close Button */
-        $('.close').mouseenter(function() {
-            $("#close" + i).attr("src", "img/close-btn1.png");
-            hoverSound();
-        })
-
-        $('.close').mouseleave(function() {
+    $('.close').mouseleave(function() {
+        for(i = 1; i < 5; i++) {
             $("#close" + i).attr("src", "img/close-btn.png");
-        })
-        
-    }
+        }
+    })
 
 })
 
@@ -231,9 +338,13 @@ function parallax() {
     $(' .parallax--bg').css('background-position', 'center ' + (wScroll * 0.75) + 'px')
 }
 
-/* Background Music and Color */
-function musicColor(music, color) {
+/* Background Music */
+function music(music) {
     $('#audio').attr('src','audio/' + music);
+}
+
+/*Background Color */
+function color(color) {
     $('.transition').css('background-color', color);
 }
 
